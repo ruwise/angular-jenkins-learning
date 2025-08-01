@@ -1,13 +1,13 @@
 pipeline {
     agent any
     environment {
-        NODEJS_HOME = tool 'node22' // Use configured NodeJS tool name
+        NODEJS_HOME = tool 'NODE20' // Use configured NodeJS tool name
         PATH = "${NODEJS_HOME}/bin:${env.PATH}"
     }
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/sbtalk71/angular-jenkins.git'
+                git 'https://github.com/ruwise/angular-jenkins-learning.git'
             }
         }
         stage('Install Dependencies') {
